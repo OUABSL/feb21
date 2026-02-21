@@ -1,0 +1,3 @@
+# Ignore local/service-account keys
+github-ci-key.json
+*.key.json
