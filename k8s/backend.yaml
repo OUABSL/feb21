@@ -14,23 +14,19 @@ spec:
     metadata:
       labels:
         app: agent-backend
-    template:
-      metadata:
-        labels:
-          app: agent-backend
-      spec:
-        containers:
-          - name: agent-backend
-            image: us-central1-docker.pkg.dev/PROJECT_ID/agent-repo/agent-backend:IMAGE_TAG
-            ports:
-              - containerPort: 80
-            resources:
-              requests:
-                memory: 512Mi
-                cpu: 250m
-              limits:
-                memory: 512Mi
-                cpu: 250m
+    spec:
+      containers:
+        - name: agent-backend
+          image: us-central1-docker.pkg.dev/PROJECT_ID/agent-repo/agent-backend:IMAGE_TAG
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 512Mi
+              cpu: 250m
+            limits:
+              memory: 512Mi
+              cpu: 250m
 
 ---
 apiVersion: v1
