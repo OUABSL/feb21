@@ -5,10 +5,14 @@ metadata:
   namespace: ucm-master
   labels:
     app: agent-backend
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agent-backend
+  template:
+    metadata:
+      labels:
         app: agent-backend
     template:
       metadata:
@@ -41,4 +45,3 @@ spec:
     - port: 80
       targetPort: 80
   type: ClusterIP
-      
